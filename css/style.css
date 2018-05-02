@@ -1,3 +1,13 @@
+body {
+    font-family: Tahoma;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 .nav-wrapper {
     width: 1024px;
     margin: 0 auto;
@@ -5,7 +15,7 @@
 }
 
 .nav-menu {
-    width: 860px;
+    width: 850px;
     font-family: Tahoma;
     font-weight: bold;
     font-size: 0.83em;
@@ -23,7 +33,7 @@
     display: block;
     color: white;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .nav-menu ul li:hover > ul {
@@ -34,16 +44,17 @@ drop {
     color: white;
     cursor: default;
     padding-right: 20px;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
-.nav-menu>ul>li:hover {
+.nav-menu>ul>li>a:hover,
+.nav-menu>ul>li.dropdown:hover{
     background: #f75c00;
 }
 
 .clearfix {
-    content: "";
-    display: table;
+    margin: auto;
+    padding-left: 0px;
 }
 
 drop:after {
@@ -59,13 +70,13 @@ drop:after {
 .sub-menu {
     position:absolute;
     display:none;
-    background: white;
 }
 
 .sub-menu li a{
     padding-left: 10px;
     margin-left: -40px;
     border: 1px solid #ccc;
+    background: white;
 }
 
 .sub-menu li:last-child a{
@@ -85,13 +96,192 @@ drop:after {
     background: #bfd8eb; 
 }
 
-li.sing {
-    color: blue;
+.sing-in {
+    padding-left: 40px;
+}
+
+.sing-in a{
+    display: block;
+    color: #a8d5eb;
     font-weight: normal;
     text-decoration: underline;
 }
 
-.sing :hover {
-    color: blue;
-    background: lightblue ;
+.sing-in a:hover {
+    color: white;
+    background: #54add8;
+}
+
+.sing-in i{
+    position: relative;
+    top: 8px;
+}
+
+.form-wrapper {
+    width: 1024px;
+    min-height: 350px;
+    margin: 0 auto;
+    background: #0085c5;
+}
+
+.form {
+    width: 850px;
+    margin: 0 auto;
+}
+
+.form legend {
+    font-family: Tahoma;
+    font-size: 1.35em;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.swap i,
+.form-link,
+.form-link a {
+    color: #94c4db;
+}
+
+.swap i:hover,
+.form-link :hover {
+    color: white;
+    text-decoration: none;
+}
+
+.swap {
+    display: inline-block;
+}
+
+.swap a {
+    position: relative;
+    bottom: 30px;
+    margin: 7px;
+}
+
+.form-city,
+.form-date,
+.price,
+.round {
+    display: inline-block;
+    color: white;
+}
+
+.form-city label,
+.form-link,
+.form-date label,
+.round label,
+.price label {
+    font-size: .845em;
+    line-height: 2em;
+}
+
+.form-city input,
+.form-date input,
+.price select,
+.btn-search button{
+    font-size: 1em;
+    padding: 0 15px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-city input {
+    width: 370px;
+}
+
+.form-date input {
+    width: 135px;
+    margin-right: 40px;
+}
+
+.btn-search button {
+    line-height: 2.4em;
+    width: 180px;
+    color: #fff;
+    background: linear-gradient(180deg, #fcc272, #f75c00)
+}
+
+.btn-search button:hover {
+    cursor: pointer;
+}
+
+.btn-search button i{
+    position: relative;
+    top: 6px;
+    right: 4px;
+}
+
+.form-link a{
+    text-decoration-style: dashed;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(https://cdn2.iconfinder.com/data/icons/web/512/Calendar-32.png) no-repeat;
+    width: 28px;
+    height: 32px;
+    border-width: thin;
+}
+
+input[type="date"]:disabled{
+    color: #94c4db;
+    background: url(https://cdn2.iconfinder.com/data/icons/web/512/Calendar-32.png) no-repeat #0b92d2;
+    background-position: 110px 5px;
+    width: 130px;
+    height: 45px;
+    border: 1px solid #1b74c4;
+}
+
+input[type="date"]::-webkit-inner-spin-button, 
+input[type="date"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.depatures-date>div{
+    display: inline-block;
+}
+
+.round {
+    display:inline-block;
+	position: relative;
+	background: #0b92d2;
+	width: 100px;
+	text-align: center;
+	border-radius:5px;
+    margin-right: 10px;
+}
+
+.round:after {
+    content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 7px solid;
+    border-color: transparent transparent transparent #0b92d2;
+	top: 50%;
+	left: 100%;
+	margin-top: -7px;
+}
+
+.price select,
+.price option {
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.price select:focus:hover {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.price select>option:hover {
+    border: 1px solid gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

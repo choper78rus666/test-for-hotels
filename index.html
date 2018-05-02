@@ -1,57 +1,127 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Test_for_Hotels.ru</title>
 </head>
 
 <body>
-
-    <div class="nav-wrapper">
-        <div class="nav-menu">
-            <ul class="clearfix">
-                <li><a href="#">SEARCH TICKETS</a></li>
-                <li><a href="#">SAPSAN</a></li>
-                <li><a href="#">ALLEGRO</a></li>
-                <li class="dropdown"><drop>TRANS SIBERIAN</drop>
-                    <ul class="sub-menu">
-                        <li><a href="#">TRANS SIBERIAN</a></li>
-                        <li><a href="#">TRANS SIBERIAN</a></li>
-                        <li><a href="#">TRANS SIBERIAN</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><drop>FAQ</drop>
-                    <ul class="sub-menu">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><drop>TICKETS GUIDE</drop>
-                    <ul class="sub-menu">
-                        <li><a href="#">Group travel</a></li>
-                        <li><a href="#">Ticket types</a></li>
-                        <li><a href="#">Child policy</a></li>
-                        <li><a href="#">Change ticket request</a></li>
-                        <li><a href="#">Cancel tickets</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><drop>CONTACT US</drop>
-                    <ul class="sub-menu">
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                    </ul>
-                </li>
-                <li class="sing"><div class="sing-in"></div><a href="#">Sign in</a></li>
-            </ul>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="nav-menu">
+                <ul class="clearfix">
+                    <li><a href="#">SEARCH TICKETS</a></li>
+                    <li><a href="#">SAPSAN</a></li>
+                    <li><a href="#">ALLEGRO</a></li>
+                    <li class="dropdown">
+                        <drop>TRANS SIBERIAN</drop>
+                        <ul class="sub-menu">
+                            <li><a href="#">TRANS SIBERIAN</a></li>
+                            <li><a href="#">TRANS SIBERIAN</a></li>
+                            <li><a href="#">TRANS SIBERIAN</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <drop>FAQ</drop>
+                        <ul class="sub-menu">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <drop>TICKETS GUIDE</drop>
+                        <ul class="sub-menu">
+                            <li><a href="#">Group travel</a></li>
+                            <li><a href="#">Ticket types</a></li>
+                            <li><a href="#">Child policy</a></li>
+                            <li><a href="#">Change ticket request</a></li>
+                            <li><a href="#">Cancel tickets</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <drop>CONTACT US</drop>
+                        <ul class="sub-menu">
+                            <li><a href="#">CONTACT US</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="sing-in"><a href="#"><i class="material-icons">&#xE7FD;</i>Sign in</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-wrapper">
+            <div class="form">
+                <form action="#" method="post">
+                    <legend>Russian Train Tickets</legend>
+                    <div class="depatures">
+                        <div class="form-city">
+                            <label for="depature">Depature city:</label>
+                            <br>
+                            <input id="depature" type="text" placeholder="Type city name">
+                            <div class="form-link">
+                                Ex:
+                                <a href="#">St.Petersburg,</a>
+                                <a href="#">Moscow</a>
+                            </div>
+                        </div>
+                        <div class="swap">
+                            <a href="#"><i class="material-icons">&#xE8D4;</i></a>
+                        </div>
+                        <div class="form-city">
+                            <label for="arrival">Arrival city:</label>
+                            <br>
+                            <input id="arrival" type="text" placeholder="Type city name">
+                            <div class="form-link">
+                                Ex:
+                                <a href="#">St.Petersburg,</a>
+                                <a href="#">Moscow</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="depatures-date">
+                        <div class="form-date">
+                            <label for="date">Depature date:</label>
+                            <br>
+                            <input id="date" type="date">
+                        </div>
+                        <div class="round">
+                            <input id="round" type="checkbox">
+                            <label for="round">Roundtrip</label>
+                        </div>
+                        <div class="form-date">
+                            <label for="return-date">Depature date:</label>
+                            <br>
+                            <input id="return-date" type="date" disabled>
+                        </div>
+                        <div class="price">
+                            <label>Currency</label>
+                            <br>
+                            <select>
+                                <option>USD</option>
+                                <option>RUB</option>
+                                <option>GBR</option>
+                                <option>EUR</option>
+                                <option>CHF</option>
+                            </select>
+                        </div>
+                        <div class="btn-search">
+                            <button type="submit"><i class="material-icons">&#xE8B6;</i>Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>
